@@ -1,1 +1,1 @@
-web: gunicorn senpos_ga.wsgi --chdir src/ --log-file -
+web: gunicorn senpos_ga.wsgi --chdir src/ --env DJANGO_SETTINGS_MODULE=senpos_ga.settings.production --log-file -
