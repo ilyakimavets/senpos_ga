@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>{{ post.title }}</h3>
+    <p>by {{ post.author }} | <small>{{ post.created_at|timesince }} ago</small></p>
+    <p>{{ post.content }}</p>
+{% endblock %}
