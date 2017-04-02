@@ -1,0 +1,1 @@
+web: gunicorn src/senpos_ga.wsgi --log-file -
