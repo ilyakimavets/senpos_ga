@@ -2,11 +2,6 @@ from .base import *
 
 import dj_database_url
 
-
-# ALLOWED_HOSTS += [
-#     'senpos-ga.herokuapp.com'
-# ]
-
 ALLOWED_HOSTS += ['*']
 
 DEBUG = False
