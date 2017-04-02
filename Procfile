@@ -1,1 +1,1 @@
-web: gunicorn src/senpos_ga.wsgi --chdir src/ --log-file -
+web: gunicorn senpos_ga.wsgi --chdir src/ --log-file -
