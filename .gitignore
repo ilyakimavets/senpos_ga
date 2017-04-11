@@ -100,5 +100,6 @@ ENV/
 # PyCharm
 .idea/
 
-# Static
-staticfiles/*
+# static / media
+staticfiles/
+media/
