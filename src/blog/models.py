@@ -10,8 +10,6 @@ class BaseModel(models.Model):
     objects = models.Manager()
 
     class Meta:
-        ordering = ['updated_at', 'created_at']
-
         abstract = True
 
 
@@ -29,3 +27,6 @@ class Post(BaseModel):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['-updated_at', '-created_at']
