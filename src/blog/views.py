@@ -1,11 +1,12 @@
-from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+
+from pure_pagination.mixins import PaginationMixin
 
 from .models import Post
 
 
-class PostListView(ListView):
+class PostListView(PaginationMixin, ListView):
     paginate_by = 5
     template_name = "blog/post_list.html"
     context_object_name = 'posts'

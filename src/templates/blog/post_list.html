@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load bootstrap_pagination %}
 
 {% block content %}
     {% for post in posts %}
@@ -31,7 +30,7 @@
             <div class="panel-body">No posts yet.</div>
         </div>
     {% endfor %}
-    <div class="row text-center">
-        {% bootstrap_paginate page_obj range=5 show_prev_next="true" show_first_last="true" %}
-    </div>
+
+    {% include '_pagination.html' %}
+
 {% endblock content %}

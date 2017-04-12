@@ -1,6 +1,5 @@
-/* Fix for Bootstrap Fixed-top Navbar */
 body {
-    padding-top: 70px;
-    background: url("../images/pattern_fabric_of_squares_gray.png");
-    font-family: "PT Sans", sans-serif;
+    padding-top: 5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
