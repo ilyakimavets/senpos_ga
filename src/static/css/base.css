@@ -3,3 +3,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
+
+.post {
+    margin-bottom: 3rem;
+}
