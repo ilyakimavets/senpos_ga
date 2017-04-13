@@ -14,7 +14,7 @@ class BaseModel(models.Model):
 
 
 class Post(BaseModel):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=100)
     content = models.TextField()
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
