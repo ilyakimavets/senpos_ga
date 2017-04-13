@@ -1,0 +1,15 @@
+.post {
+    margin-bottom: 3rem;
+}
+
+.post-header {
+    text-align: center;
+}
+
+.rating-default {
+    color: #292b2c;
+}
+
+.rating-liked {
+    color: #0275d8;
+}

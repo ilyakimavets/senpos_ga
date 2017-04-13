@@ -1,24 +1,38 @@
-{% extends 'base.html' %}
-
+{% extends 'blog/base.html' %}
 {% block content %}
     {% for post in posts %}
         <div class="card post">
-            <h4 class="card-header"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+            <div class="card-header post-header">
+                <div class="row">
+                    <div class="col-md-2 post-rating">
+                        <a href="#" class="rating-default"><i class="fa fa-thumbs-up fa-fw"
+                                                              aria-hidden="true"></i>15</a>
+                    </div>
+                    <div class="col-md-4 post-author">
+                        <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>{{ post.author }}
+                    </div>
+                    <div class="col-md-4 post-date">
+                        <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ post.created_at|timesince }} ago
+                    </div>
+                    <div class="col-md-2 post-views">
+                        <i class="fa fa-eye fa-fw" aria-hidden="true"></i>386
+                    </div>
+                </div>
+            </div>
+
             <div class="card-block">
+                <h4 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
                 <p class="card-text">{{ post.content|truncatewords:100 }}</p>
-                <a href="{{ post.get_absolute_url }}" class="btn btn-primary"><i class="fa fa-arrow-right fa-fw" aria-hidden="true"></i> Read more</a>
             </div>
             <div class="card-footer text-muted">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-9">
                         {#                            TODO: ADD TAGS FUNCTIONALITY #}
                         <i class="fa fa-tags" aria-hidden="true"></i> test, tag, another, tag
                     </div>
-                    <div class="col-md-4">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.created_at }}
-                    </div>
-                    <div class="col-md-3 text-right">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> {{ post.author }}
+                    <div class="col-md-3 text-center">
+                        <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm"><i
+                                class="fa fa-arrow-right fa-fw" aria-hidden="true"></i> Read more</a>
                     </div>
                 </div>
             </div>
