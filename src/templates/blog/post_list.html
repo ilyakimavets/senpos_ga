@@ -2,42 +2,38 @@
 {% block content %}
     {% for post in posts %}
         <div class="card post">
-            <h4 class="card-header mb-0">
+            <h4 class="card-header mb-0 post-header">
                 <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
             </h4>
-            <div class="card-block pt-2">
+            <div class="card-block pt-2 post-content">
                 <i class="fa fa-tags fa-fw mr-1" aria-hidden="true"></i><a href="">test, tag, another, tag</a>
-                <img class="img-fluid mt-3 w-100 mx-auto"
+                <img class="img-fluid mt-2 w-100 mx-auto post-image"
                      src="https://habrastorage.org/files/af0/ed9/8ee/af0ed98ee106437fa8f677dbb408023f.jpg" alt="Image">
                 <p class="card-text p-2 mt-3">{{ post.content|truncatewords:100 }}</p>
-                <div class="row">
-                    <div class="col-md-5">
+                <div class="row post-actions">
+                    <div class="col-md-5 col-sm-5 post-comments-link">
                         <a href="#"><i class="fa fa-comments-o fa-fw" aria-hidden="true"></i>Comments (97851)</a>
                     </div>
-                    <div class="col-md-3">
-
-                    </div>
-                    <div class="col-md-4 text-right">
+                    <div class="col-md-4 col-sm-4 offset-md-3 offset-sm-3 post-read-more">
                         <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm ml-2"><i
                                 class="fa fa-arrow-right fa-fw" aria-hidden="true"></i>Read more</a>
                     </div>
                 </div>
-
             </div>
-            <div class="card-footer text-muted">
-                <div class="row">
-                    <div class="col-md-2">
-                        <a href="#" class="favorite"><i class="fa fa-star-o fa-fw" aria-hidden="true"></i>Favorite</a>
+            <div class="card-footer text-muted post-footer">
+                <div class="row post-meta">
+                    <div class="col-md-2 col-2 post-favorite">
+                        <a href="#"><i class="fa fa-star-o fa-fw" aria-hidden="true"></i>Favorite</a>
                     </div>
 
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-3 col-3 post-views">
                         <i class="fa fa-eye fa-fw mr-1" aria-hidden="true"></i>Views: 386
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-4 col-4 post-author">
                         <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>{{ post.author }}
                     </div>
 
-                    <div class="col-md-3 text-right post-date">
+                    <div class="col-md-3 col-3 post-date">
                         <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ post.created_at|date:"H:i | j.m.Y" }}
                     </div>
                 </div>
@@ -45,7 +41,7 @@
         </div>
     {% empty %}
         <div class="card post">
-            <div class="card-block">
+            <div class="card-block post-content">
                 <h3 class="card-title">No posts yet</h3>
                 <p class="card-text">Hey, it's a good time to explore other corners of our site!</p>
                 <a href="/" class="btn btn-primary">Explore</a>
