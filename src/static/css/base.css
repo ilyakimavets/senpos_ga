@@ -4,3 +4,7 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: #f3f3f3;
 }
+
+.sidebar-card {
+    margin-bottom: 2rem;
+}

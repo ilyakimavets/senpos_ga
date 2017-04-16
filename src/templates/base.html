@@ -26,13 +26,8 @@
 {% endblock navbar %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            {% block content %}
-            {% endblock content %}
-        </div>
-        <div class="col-md-3 offset-md-1"></div>
-    </div>
+    {% block content %}
+    {% endblock content %}
 </div>
 
 {% block js %}
