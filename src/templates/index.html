@@ -1,1 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="card mb-3">
+        <div class="card-block">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="img-fluid rounded" src="{% static 'images/djaler.jpg' %}" alt="Avatar">
+                </div>
+                <div class="col-md-7 ">
+                    <h2>Roman Kirillov</h2>
+                    <h5>
+                        <i class="fa fa-home fa-fw" aria-hidden="true"></i>
+                        Closed Donetsk Mutant Colony</h5>
+                    <p class="mt-4">This site will allow you to get latest news about researches I and my <s
+                            class="text-muted">school</s>master <i>Chingiz
+                        Fedorovich Xavrenko</i> are producing.</p>
+                    <p>Feel free to mail me about your ideas about growing up this site.</p>
+                    <p>
+                       <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
+                        roman_experiment5723@mutants.edu.dnr
+                    </p>
+                    <small class="text-muted">help me</small>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock content %}
