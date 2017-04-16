@@ -1,12 +1,13 @@
 {% extends 'blog/base.html' %}
-{% block content %}
+{% block main %}
     {% for post in posts %}
         <div class="card post">
             <h4 class="card-header mb-0 post-header">
                 <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
             </h4>
             <div class="card-block pt-2 post-content">
-                <i class="fa fa-tags fa-fw mr-1" aria-hidden="true"></i><a href="">test, tag, another, tag</a>
+                <i class="fa fa-tags fa-fw mr-1 text-muted" aria-hidden="true"></i><a href="">test, tag, another,
+                tag</a>
                 <img class="img-fluid mt-2 w-100 mx-auto post-image"
                      src="https://habrastorage.org/files/af0/ed9/8ee/af0ed98ee106437fa8f677dbb408023f.jpg" alt="Image">
                 <p class="card-text p-2 mt-3">{{ post.content|truncatewords:100 }}</p>
@@ -34,7 +35,7 @@
                     </div>
 
                     <div class="col-md-3 col-3 post-date">
-                        <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ post.created_at|date:"H:i | j.m.Y" }}
+                        <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{{ post.created_at|date:"H:i, j.m.Y" }}
                     </div>
                 </div>
             </div>
@@ -50,5 +51,4 @@
     {% endfor %}
 
     {% include '_pagination.html' %}
-
-{% endblock content %}
+{% endblock main %}

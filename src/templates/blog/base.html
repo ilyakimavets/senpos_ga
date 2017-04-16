@@ -4,3 +4,17 @@
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 {% endblock css %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            {% block main %}
+            {% endblock main %}
+        </div>
+        <div class="col-md-4">
+            {% block sidebar %}
+                {% include 'sidebar.html' %}
+            {% endblock sidebar %}
+        </div>
+    </div>
+{% endblock content %}
