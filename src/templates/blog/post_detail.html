@@ -1,22 +1,50 @@
 {% extends 'blog/base.html' %}
-{% block main %}
 
+{% block main %}
     <div class="card post">
-        <h4 class="card-header">{{ post.title }}</h4>
-        <div class="card-block">
-            <p class="card-text">{{ post.content }}</p>
+        <h4 class="card-header mb-0 post-header">
+            <a href="{{ post.get_absolute_url }}" class="text-muted">{{ post.title }}</a>
+        </h4>
+        <div class="card-block post-content">
+            <img class="img-fluid mt-2 w-100 mx-auto post-image"
+                 src="https://habrastorage.org/files/af0/ed9/8ee/af0ed98ee106437fa8f677dbb408023f.jpg" alt="Image">
+            <p class="card-text p-2 mt-3">{{ post.content|truncatewords:100 }}</p>
+
+            <div class="row post-actions">
+                <div class="col-md-4 col-4">
+                    <a href="#">
+                        <i class="fa fa-clock-o fa-fw"
+                           aria-hidden="true"></i>{{ post.created_at|date:"H:i, j.m.Y" }}
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-4 post-favorite">
+                    <a href="#">
+                        <i class="fa fa-star-o fa-fw" aria-hidden="true"></i>
+                        Favorite (3537)
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-sm-4 post-share-link">
+                    <a href="#">
+                        <i class="fa fa-bullhorn fa-fw" aria-hidden="true"></i>
+                        Share
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="card-footer text-muted">
-            <div class="row">
-                <div class="col-md-5">
-                    {#                            TODO: ADD TAGS FUNCTIONALITY #}
-                    <i class="fa fa-tags" aria-hidden="true"></i> test, tag, another, tag
+        <div class="card-footer text-muted post-footer">
+            <div class="row post-meta">
+                <div class="col-md-6 col-6 post-tags">
+                    <i class="fa fa-tags fa-fw text-muted" aria-hidden="true"></i><a href="">test, tag,
+                    another,
+                    tag</a>
                 </div>
-                <div class="col-md-4">
-                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.created_at }}
-                </div>
-                <div class="col-md-3 text-right">
-                    <i class="fa fa-pencil" aria-hidden="true"></i> {{ post.author }}
+
+                <div class="col-md-6 col-6 post-author">
+                    <a href="#" class="">
+                        <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>{{ post.author }}
+                    </a>
                 </div>
             </div>
         </div>

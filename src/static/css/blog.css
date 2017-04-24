@@ -1,21 +1,28 @@
 .post {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .post-comments-link {
-    text-align: left;
-    margin-bottom: 0.7rem;
-}
-
-.post-read-more {
     text-align: right;
 }
 
-.post-views, .post-author {
+.post-favorite {
     text-align: center;
 }
 
 .post-date {
+    text-align: left;
+}
+
+.post-author {
+    text-align: right;
+}
+
+.post-tags {
+    text-align: left;
+}
+
+.post-share-link {
     text-align: right;
 }
 
