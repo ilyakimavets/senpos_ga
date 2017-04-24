@@ -1,8 +1,7 @@
 defusedxml==0.5.0
 dj-database-url==0.4.2
-Django==1.10.6
+Django==1.11
 django-allauth==0.31.0
-django-bootstrap-pagination==1.6.2
 django-crispy-forms==1.6.1
 django-pure-pagination==0.3.0
 gunicorn==19.7.1
@@ -11,6 +10,7 @@ olefile==0.44
 Pillow==4.1.0
 psycopg2==2.7.1
 python3-openid==3.1.0
+pytz==2017.2
 requests==2.13.0
 requests-oauthlib==0.8.0
 whitenoise==3.3.0
