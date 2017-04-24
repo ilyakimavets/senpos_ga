@@ -1,3 +1,10 @@
 {% extends "base.html" %}
 
-
+{% block content %}
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="auth-block w-50">
+            {% block auth %}
+            {% endblock auth %}
+        </div>
+    </div>
+{% endblock content %}

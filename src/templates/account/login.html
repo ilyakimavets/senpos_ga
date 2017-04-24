@@ -4,18 +4,18 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Log In" %}{% endblock %}
 
-{% block content %}
-    <div class="card w-75">
-        <h3 class="card-header">{% trans "Sign In" %}</h3>
+{% block auth %}
+    <div class="card">
+        <h3 class="card-header">{% trans "Log In" %}</h3>
         <div class="card-block">
             {% get_providers as socialaccount_providers %}
 
             {% if socialaccount_providers %}
-                <p>{% blocktrans with site.name as site_name %}Please sign in with one
-                    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-                    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+                <p>{% blocktrans with site.name as site_name %}Please log in with one
+                    of your existing third party accounts. Or, <a href="{{ signup_url }}">register</a>
+                    for a {{ site_name }} account and log in below:{% endblocktrans %}</p>
 
                 <div class="form-group socialaccount_ballot">
 
@@ -31,7 +31,7 @@
 
             {% else %}
                 <p>{% blocktrans %}If you have not created an account yet, then please
-                    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+                    <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}</p>
             {% endif %}
 
             <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -45,15 +45,15 @@
                     <div class="col-md-4">
                         <button class="btn btn-primary primaryAction" type="submit">
                             <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>
-                            {% trans "Sign In" %}
+                            {% trans "Log In" %}
                         </button>
                     </div>
                     <div class="col-md-8 text-right">
-                        <a class="button secondaryAction"
+                        <a class="btn btn-link"
                            href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-{% endblock %}
+{% endblock auth %}
