@@ -3,11 +3,11 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Register" %}{% endblock %}
+{% block head_title %}{% trans "Sign Up" %}{% endblock %}
 
 {% block auth %}
     <div class="card">
-        <h3 class="card-header">{% trans "Register" %}</h3>
+        <h3 class="card-header">{% trans "Sign Up" %}</h3>
         <div class="card-block">
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
@@ -20,11 +20,11 @@
                     <div class="col-md-4">
                         <button class="btn btn-primary primaryAction" type="submit">
                             <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>
-                            {% trans "Register" %}
+                            {% trans "Sign Up" %}
                         </button>
                     </div>
                     <div class="col-md-8 text-right">
-                        <a href="{{ login_url }}" class="btn btn-link">{% blocktrans %}Already registered? Log
+                        <a href="{{ login_url }}" class="btn btn-link">{% blocktrans %}Already Signed Up? Log
                             In here.{% endblocktrans %}</a>
                     </div>
                 </div>
