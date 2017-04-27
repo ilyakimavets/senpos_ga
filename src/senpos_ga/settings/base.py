@@ -35,12 +35,11 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'crispy_forms',
+    'pure_pagination',
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
-    'pure_pagination',
 
     'blog.apps.BlogConfig',
 ]
