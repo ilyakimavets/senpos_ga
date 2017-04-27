@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 
+{% load static %}
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+{% endblock css %}
+
 {% block content %}
     <div class="row d-flex justify-content-center align-items-center">
-        <div class="auth-block w-50">
+        <section id="auth-container">
             {% block auth %}
             {% endblock auth %}
-        </div>
+        </section>
     </div>
 {% endblock content %}

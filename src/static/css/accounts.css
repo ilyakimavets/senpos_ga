@@ -1,0 +1,35 @@
+#auth-container {
+    width: 50%;
+}
+
+#already-signed-up-link {
+    text-align: left;
+}
+
+#sign-up-button {
+    text-align: right;
+}
+
+#login-button {
+    text-align: right;
+}
+
+#forgot-password-link {
+    text-align: left;
+}
+
+@media (max-width: 991px) {
+    #auth-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    #already-signed-up-link {
+        text-align: center;
+    }
+
+    #sign-up-button {
+        text-align: center;
+    }
+}
